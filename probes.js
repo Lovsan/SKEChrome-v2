@@ -65,6 +65,7 @@ function MaxProbes()
 		var ratio = Math.floor(MaxProbes / Land);
 		var MaxTarget = Math.floor(MaxProbes / 8);
 		var MinTarget = Math.floor(MaxProbes / 16);
+		var PowerNeeded = Math.max(MaxProbes * 2);
 		var newElement;
 		var form = document.getElementsByName("amount")[0];
 		
@@ -83,9 +84,10 @@ function MaxProbes()
 		' land.' +
 		'<br><b>Probes divided by 16:</b> ' +
 		MinTarget +
-		' land.</div>' ;
+		' land.<br>' +
+		'<b>Power Needed to Shield Probes:</b> ' + PowerNeeded + '<br>' +
+		'</div>' ;
 		form.parentNode.insertBefore(newElement, form.nextSibling);	
-	}
 }
         
 MaxProbes();
